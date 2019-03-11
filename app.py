@@ -18,8 +18,8 @@ def train():
     if request.method == 'POST':
         result = request.form
         pred_size = int(result['predsize'])
-        step_size = pred_size // 2
-        pred_size = 2
+        step_size = pred_size
+        pred_size = 1
         raw_data = pd.read_csv('static/house-sales.csv')
         timeseries = np.asarray(raw_data['sales'])
         buffer = timeseries.tolist()
