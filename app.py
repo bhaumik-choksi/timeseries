@@ -26,7 +26,7 @@ def train():
         pred = []
         for t in range(pred_size):
             print(t)
-            model = ARIMA(buffer, order=(10, 1, 0))
+            model = ARIMA(buffer, order=(8, 1, 0))
             model_fit = model.fit(disp=0)
             output = model_fit.forecast(steps=step_size)
             print(output)
